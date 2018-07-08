@@ -20,13 +20,6 @@
 		"@babel/preset-env": "^7.0.0-beta.52",
 		"babel-core": "^7.0.0-bridge.0",
 		"babel-jest": "^23.2.0",
-		"jest": "^23.3.0",
-		"lebab": "^2.7.7",
-		"regenerator-runtime": "^0.12.0",
-		"rollup": "^0.55.5",
-		"rollup-plugin-babel": "^4.0.0-beta.7",
-		"rollup-plugin-node-resolve": "^3.0.2",
-		"rollup-plugin-resolve": "0.0.1-predev.1",
 		"callbag": "^1.1.0",
 		"callbag-combine": "^1.1.0",
 		"callbag-concat": "^1.0.1",
@@ -48,6 +41,14 @@
 		"callbag-scan": "^1.0.1",
 		"callbag-share": "^1.0.0",
 		"callbag-skip": "^1.0.0",
-		"callbag-take": "^1.0.0"
+		"callbag-subject": "^1.0.2",
+		"callbag-take": "^1.0.0",
+		"jest": "^23.3.0",
+		"lebab": "^2.7.7",
+		"regenerator-runtime": "^0.12.0",
+		"rollup": "^0.55.5",
+		"rollup-plugin-babel": "^4.0.0-beta.7",
+		"rollup-plugin-node-resolve": "^3.0.2",
+		"rollup-plugin-resolve": "0.0.1-predev.1"
 	}
 }
