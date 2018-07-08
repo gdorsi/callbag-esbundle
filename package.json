@@ -1,0 +1,53 @@
+{
+	"name": "@gdorsi/callbag-bundle",
+	"version": "0.1.0",
+	"description": "A collection of callbag modules exported as es modules",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/gdorsi/callbag-esmodules.git"
+	},
+	"main": "dist/bundle.cjs.js",
+	"module": "dist/bundle.esm.js",
+	"browser": "dist/bundle.umd.js",
+	"scripts": {
+		"build": "rollup -c",
+		"test": "jest"
+	},
+	"author": "Guido D'Orsi <gu.dorsi@gmail.com>",
+	"license": "MIT",
+	"devDependencies": {
+		"@babel/core": "^7.0.0-beta.52",
+		"@babel/preset-env": "^7.0.0-beta.52",
+		"babel-core": "^7.0.0-bridge.0",
+		"babel-jest": "^23.2.0",
+		"jest": "^23.3.0",
+		"lebab": "^2.7.7",
+		"regenerator-runtime": "^0.12.0",
+		"rollup": "^0.55.5",
+		"rollup-plugin-babel": "^4.0.0-beta.7",
+		"rollup-plugin-node-resolve": "^3.0.2",
+		"rollup-plugin-resolve": "0.0.1-predev.1",
+		"callbag": "^1.1.0",
+		"callbag-combine": "^1.1.0",
+		"callbag-concat": "^1.0.1",
+		"callbag-filter": "^1.0.1",
+		"callbag-flatten": "^1.1.0",
+		"callbag-for-each": "^1.0.1",
+		"callbag-from-event": "^1.0.0",
+		"callbag-from-iter": "^1.1.0",
+		"callbag-from-obs": "^1.2.0",
+		"callbag-from-promise": "^1.0.0",
+		"callbag-interval": "^1.0.0",
+		"callbag-map": "^1.0.1",
+		"callbag-merge": "^2.0.1",
+		"callbag-observe": "^1.0.0",
+		"callbag-of": "^1.0.0",
+		"callbag-pipe": "^1.1.1",
+		"callbag-sample": "^2.0.0",
+		"callbag-sample-when": "^1.0.0",
+		"callbag-scan": "^1.0.1",
+		"callbag-share": "^1.0.0",
+		"callbag-skip": "^1.0.0",
+		"callbag-take": "^1.0.0"
+	}
+}
