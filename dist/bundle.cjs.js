@@ -905,6 +905,76 @@ function makeSubject() {
   };
 }
 
+var noop = function noop() {};
+
+var UNIQUE = {};
+
+function remember(source) {
+  var sinks = [];
+  var inited = false;
+  var endValue = UNIQUE;
+  var ask;
+  var value;
+  return function (start, sink) {
+    if (start !== 0) return;
+
+    if (endValue !== UNIQUE) {
+      sink(0, noop);
+
+      if (inited) {
+        sink(1, value);
+      }
+
+      sink(2, endValue);
+      return;
+    }
+
+    sinks.push(sink);
+
+    if (sinks.length === 1) {
+      source(0, function (type, data) {
+        if (type === 0) {
+          ask = data;
+          return;
+        }
+
+        if (type === 1) {
+          inited = true;
+          value = data;
+        }
+
+        sinks.slice(0).forEach(function (sink) {
+          sink(type, data);
+        });
+
+        if (type === 2) {
+          endValue = data;
+          sinks = null;
+        }
+      });
+    }
+
+    sink(0, function (type, data) {
+      if (type === 0) return;
+
+      if (type === 1 && endValue === UNIQUE) {
+        ask(1);
+        return;
+      }
+
+      var index = sinks.indexOf(sink);
+
+      if (index !== -1) {
+        sinks.splice(index, 1);
+      }
+    });
+
+    if (inited && endValue === UNIQUE) {
+      sink(1, value);
+    }
+  };
+}
+
 exports.forEach = forEach;
 exports.fromObs = fromObs;
 exports.fromIter = fromIter;
@@ -927,3 +997,4 @@ exports.of = of;
 exports.sample = sample;
 exports.sampleWhen = sampleWhen;
 exports.makeSubject = makeSubject;
+exports.remember = remember;

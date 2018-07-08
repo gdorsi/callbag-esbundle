@@ -36,6 +36,7 @@
 		"callbag-observe": "^1.0.0",
 		"callbag-of": "^1.0.0",
 		"callbag-pipe": "^1.1.1",
+		"callbag-remember": "^1.0.2",
 		"callbag-sample": "^2.0.0",
 		"callbag-sample-when": "^1.0.0",
 		"callbag-scan": "^1.0.1",
