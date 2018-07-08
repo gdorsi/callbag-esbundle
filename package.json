@@ -1,10 +1,10 @@
 {
-	"name": "@gdorsi/callbag-bundle",
+	"name": "@dorsi/callbag-bundle",
 	"version": "0.1.0",
 	"description": "A collection of callbag modules exported as es modules",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/gdorsi/callbag-esmodules.git"
+		"url": "git+https://github.com/gdorsi/callbag-esbundle.git"
 	},
 	"main": "dist/bundle.cjs.js",
 	"module": "dist/bundle.esm.js",
